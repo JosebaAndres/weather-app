@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "weather-app-library": [
+        "dist/weather-app-library"
+      ],
+      "weather-app-library/*": [
+        "dist/weather-app-library/*"
+      ]
+    }
   }
 }

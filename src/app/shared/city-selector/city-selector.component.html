@@ -1,0 +1,6 @@
+<select [ngModel]="$selectedOption | async" (ngModelChange)="changeSelectedOption($event)">
+  <option *ngFor="let city of $searchedCities | async" [value]="city.id">{{city.name}}</option>
+</select>
+<button *ngIf="$selectedOption | async" [routerLink]="['cities','detail',$selectedOption | async]">
+  Go
+</button>

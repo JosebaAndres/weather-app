@@ -1,0 +1,11 @@
+<div>
+  <h4>City weather</h4>
+  <lib-wheather-viewer [weather]="$weather | async" viewType="detail">
+  </lib-wheather-viewer>
+  <ul>
+    <li *ngFor="let forecast of $forecasts | async">
+      <app-forecast-viewer [forecast]="forecast">
+      </app-forecast-viewer>
+    </li>
+  </ul>
+</div>

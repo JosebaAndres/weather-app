@@ -1,0 +1,10 @@
+<div>
+  <h4>Weather in your city</h4>
+  <input #searchBox (input)="search(searchBox.value)" />
+  <ul>
+    <li *ngFor="let weather of $weathers | async">
+      <lib-wheather-viewer [weather]="weather">
+      </lib-wheather-viewer>
+    </li>
+  </ul>
+</div>

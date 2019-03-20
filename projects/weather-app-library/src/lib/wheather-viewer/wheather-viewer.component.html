@@ -1,0 +1,15 @@
+<div *ngIf="weather">
+  <div *ngIf="viewType === 'card'">
+    <a routerLink="/cities/detail/{{weather.id}}">
+      {{weather.name}}, {{weather.sys?.country}}
+    </a>
+  </div>
+  <h5 *ngIf="viewType === 'detail'">
+    {{weather.name}}, {{weather.sys?.country}}
+  </h5>
+  <div>{{weather.main?.temp}} °С</div>
+  <div>temperature from {{weather.main?.temp_min}} to {{weather.main?.temp_max}} °С</div>
+  <div *ngFor="let weather of weather.weather">
+    {{weather.description}}
+  </div>
+</div>
